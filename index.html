@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-LW9Ax8m9l2pB1L+Ba2Tc86JedO7uk5sSzx4C/DwA5kStbUSmChMKMm1u7W1V4hJ0B6SKKEiRj2YKoKx4ZY9i7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-LW9Ax8m9l2pB1L+Ba2Tc86JedO7uk5sSzx4C/DwA5kStbUSmChMKMm1u7W1V4hJ0B6SKKEiRj2YKoKx4ZY9i7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algonquin Rocketry</title>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <script type="module" src="/main.js"></script>
+  <header class="header">
+    <ul class="menu">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/acrocketry/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+            <path d="M21.5 0h-19C1.121 0 0 1.121 0 2.5v19C0 22.879 1.121 24 2.5 24h19c1.379 0 2.5-1.121 2.5-2.5v-19C24 1.121 22.879 0 21.5 0zM7.628 19H4V9h3.628v10zm-1.815-11.707c-1.096 0-1.98-.883-1.98-1.98s.883-1.98 1.98-1.98c1.096 0 1.98.883 1.98 1.98s-.884 1.98-1.98 1.98zm14.187 11.707h-3.63v-5.543c0-1.317-.026-3.017-1.836-3.017-1.838 0-2.121 1.438-2.121 2.92v5.64h-3.63V9H15.4v1.552h.052c.508-.961 1.746-1.973 3.592-1.973 3.847 0 4.552 2.53 4.552 5.827v6.094z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/acrocketry" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+            <path d="M12 2.1c-4.88 0-5.479.018-7.382.107-1.902.089-3.316.402-4.316.853a6.42 6.42 0 0 0-2.928 1.928A6.42 6.42 0 0 0 .843 6.3c-.45 1-.764 2.414-.853 4.316C.018 6.521 0 7.12 0 12s.018 5.479.107 7.382c.089 1.902.402 3.316.853 4.316a6.42 6.42 0 0 0 1.928 2.928c1 .45 2.414.764 4.316.853C6.521 23.982 7.12 24 12 24s5.479-.018 7.382-.107c1.902-.089 3.316-.402 4.316-.853a6.42 6.42 0 0 0 2.928-1.928 6.42 6.42 0 0 0 1.928-2.928c.45-1 .764-2.414.853-4.316.089-1.902.107-2.501.107-7.382s-.018-5.479-.107-7.382c-.089-1.902-.402-3.316-.853-4.316a6.42 6.42 0 0 0-1.928-2.928A6.42 6.42 0 0 0 17.7.843c-1-.45-2.414-.764-4.316-.853C17.479.018 16.88 0 12 0zm0 5.337a6.663 6.663 0 0 1 6.663 6.663 6.663 6.663 0 0 1-6.663 6.663A6.663 6.663 0 0 1 5.337 12 6.663 6.663 0 0 1 12 5.337zm0 13.399a5.74 5.74 0 0 1-5.738-5.737 5.74 5.74 0 0 1 5.738-5.738 5.74 5.74 0 0 1 5.738 5.738 5.74 5.74 0 0 1-5.738 5.738zM18.83 6.72a1.17 1.17 0 1 0-2.34 0 1.17 1.17 0 0 0 2.34 0z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/acrocketry" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+            <path d="M23.953 4.569c-.885.389-1.835.654-2.836.774 1.019-.611 1.798-1.577 2.165-2.732-.951.562-2.005.972-3.125 1.194-.897-.959-2.178-1.559-3.598-1.559-2.725 0-4.935 2.21-4.935 4.934 0 .388.044.765.127 1.125-4.103-.207-7.746-2.175-10.189-5.17-.425.723-.668 1.563-.668 2.465 0 1.705.867 3.208 2.185 4.08-.805-.026-1.56-.247-2.22-.616v.06c0 2.385 1.693 4.374 3.945 4.828-.413.112-.848.171-1.297.171-.317 0-.625-.03-.928-.089.626 1.951 2.445 3.375 4.605 3.416-1.686 1.32-3.808 2.106-6.113 2.106-.398 0-.79-.023-1.178-.068 2.177 1.398 4.751 2.217 7.537 2.217 9.032 0 13.965-7.49 13.965-13.964 0-.212-.005-.423-.014-.633.961-.695 1.8-1.564 2.455-2.555z"/>
+          </svg>
+        </a>
+      </div>
+  
+      <li><a class="menuItem" href="#home" id="Home">Home</a></li>
+      <li><a class="menuItem" href="#AboutUs">About Us</a></li>
+      <li><a class="menuItem" href="#Competition">Competition</a></li>
+      <li><a class="menuItem" href="#Mission" id="mission-link">Mission</a></li>
+      <li><a class="menuItem" href="./sponsors.html">Sponsors</a></li>
+      <li><a class="menuItem" href="#Outreach">Outreach</a></li>
+      <li><a class="menuItem" href="#Contact">Contact Us</a></li>
+    </ul>
+    <button class="hamburger">
+      <!-- material icons https://material.io/resources/icons/ -->
+      <i class="menuIcon material-icons">menu</i>
+      <i class="closeIcon material-icons">close</i>
+    </button>
+  </header>
+  
+
+  <main>
+    
+    <section id="home">
+      <p>Algonquin College Rocketry</p>
+      <p id="secondText">Let's soar to new heights together</p>
+    </section>
+      <script src="./JScripts/menu.js"></script>
+
+    <section id="AboutUs">
+      <h2>About Us</h2>
+      <div class="biggerImageSliderContainer">
+        <p id="AboutUsText">ACR is a multidisciplinary team that aims to design and 
+          build a rocket that will reach Mach 1.7 and 17,000 feet. 
+          Our team is constantly improving our skills in various 
+          fields such as mechanical, electrical, robotics, 
+          and computer engineering, as well as business, marketing, 
+          and graphic design. </p>
+        <div class="imageContainer">
+          <div class="sliderWrapper">
+            <button id="prevImage" class="slideButton material-symbols-rounded">
+              chevron_left
+            </button>
+            <ul class="imageList">
+              <img class="imageItem" src="images/img1.jpg" alt="Image 1">
+              <img class="imageItem" src="images/img2.jpg" alt="Image 2">
+              <img class="imageItem" src="images/img3.jpg" alt="Image 3">
+              <img class="imageItem" src="images/img4.jpg" alt="Image 4">
+              <img class="imageItem" src="images/img5.jpg" alt="Image 5">
+              <img class="imageItem" src="images/img6.jpg" alt="Image 7">
+              <img class="imageItem" src="images/img7.jpg" alt="Image 8">
+            </ul>
+            <button id="nextImage" class="slideButton material-symbols-rounded">
+              chevron_right
+            </button>
+          </div>
+          <div class="sliderScrollbar">
+            <div class="scrollbarTrack">
+              <div class="scrollbarThumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./JScripts/imageSliderScript.js"></script>
+    </section>
+
+    <section id="Mission">
+      <h2>Our Mission</h2>
+      <p class="MissionText">ACR’s mission is to create the best rockets possible, showing our skills and innovation while improving our abilities and representing Algonquin College.</p>
+      <p class="MissionText">We’re competing in the Basic Category of the 2024 Launch Canada Competition against Universities across Canada.</p>
+      <p class="MissionText">The Basic Category limits design to exclusively commercial off-the-shelf parts (COTS). In the future, we plan to participate in Launch Canada’s Advanced Category and the Spaceport American Cup.</p>
+
+      <div class="MissionCardsContainer">
+        <div class="MissionCard">
+          <div class="intro">
+            <h2>Short Term</h2>
+            <div class="MissionCardContent">
+              <p>Design, test, build, and successfully launch our Rocket.</p>
+              <p>Reach a launch apogee of over 22,000ft and Mach 2.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="MissionCard">
+          <div class="intro">
+            <h2>Mid Term</h2>
+            <div class="MissionCardContent">
+              <p>Advance to higher levels of the Launch Canada competition.</p>
+              <p>Expand our outreach efforts.</p>
+              <p>Enhance our team self-sufficiency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="MissionCard">
+          <div class="intro">
+            <h2>Long Term</h2>
+            <div class="MissionCardContent">
+              <p>Compete in future Launch Canada Competitions as well as Spaceport America Cup.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Competition">
+      <h2>Launch Canada Competition 2024</h2>
+      <div class="CompetitionContent">
+        <div class="CompetitionText">
+        <p id="CompetitionText">ACR’s mission is to create the best rockets possible, 
+          showing our skills and innovation while improving our team’s abilities and 
+          representing Algonquin College. <br><br></p>
+        <p id="CompetitionText">We’re competing in the Basic Category of the 2024 Launch 
+          Canada Competition against Universities across Canada. The Basic Category limits 
+          design to exclusively commercial off-the-shelf parts (COTS). In the future, we 
+          plan to participate in Launch Canada’s Advanced Category and the Spaceport 
+          American Cup. </p>
+        </div>
+        <img src="./images/LaunchCanadaLogo.png" alt="Launch Canada 2024 Logo">
+      </div>
+    </section>
+    <section id="Outreach">
+      <h2>OutReach</h2>
+      <div class="OutreachContent">
+        <p>
+          ACR is committed to inspiring the next generation to pursue a fulfilling career in 
+          STEM. Our outreach program consists of donating 3D Printers and introducing 3D 
+          modeling to young students. This mission is directed at elementary and high schools, 
+          especially in low-income areas, with the goal to ignite a passion for engineering 
+          and STEM in young minds. Your brand will be associated with these noble initiatives, 
+          showcasing your commitment to social responsibility. 
+        </p>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="contactBiggerContainer">
+        <div id="contactContainer">
+          <h2>Contact Us </h2>
+          <h3 style=" display: flex;    justify-content: center;">algonquincollegerocketry@gmail.com</h3>
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact_form">
+            <input type="hidden" name="access_key" value="10a4ad06-193a-4ba6-9294-3c988e289aae">
+            <div class="name">
+              <label for="name"></label>
+              <input type="text" placeholder="Name" name="name" id="nameInput" required>
+            </div>
+            <div class="email">
+              <label for="email"></label>
+              <input type="email" placeholder="Email" name="email" id="emailInput" required>
+            </div>
+            <div class="subject">
+              <label for="subject"></label>
+              <input type="text" placeholder="Subject Line" name="subject" id="subjectInput" required>
+            </div>
+            <div class="message">
+              <label for="message"></label>
+              <textarea name="message" placeholder="Message" id="messageInput" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Coming Soon" id="formButton"/>
+            </div>
+          </form>
+          </div>
+      </div>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <!--<script src="./JScripts/contactScript.js"></script> -->
+      <script src="./JScripts/sendEmailScript.js"></script>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <p style="font-size: large; font-weight: 600;">&copy; 2024 Algonquin Rocketry</p>
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/company/acrocketry/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+              <path d="M21.5 0h-19C1.121 0 0 1.121 0 2.5v19C0 22.879 1.121 24 2.5 24h19c1.379 0 2.5-1.121 2.5-2.5v-19C24 1.121 22.879 0 21.5 0zM7.628 19H4V9h3.628v10zm-1.815-11.707c-1.096 0-1.98-.883-1.98-1.98s.883-1.98 1.98-1.98c1.096 0 1.98.883 1.98 1.98s-.884 1.98-1.98 1.98zm14.187 11.707h-3.63v-5.543c0-1.317-.026-3.017-1.836-3.017-1.838 0-2.121 1.438-2.121 2.92v5.64h-3.63V9H15.4v1.552h.052c.508-.961 1.746-1.973 3.592-1.973 3.847 0 4.552 2.53 4.552 5.827v6.094z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/acrocketry" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+              <path d="M12 2.1c-4.88 0-5.479.018-7.382.107-1.902.089-3.316.402-4.316.853a6.42 6.42 0 0 0-2.928 1.928A6.42 6.42 0 0 0 .843 6.3c-.45 1-.764 2.414-.853 4.316C.018 6.521 0 7.12 0 12s.018 5.479.107 7.382c.089 1.902.402 3.316.853 4.316a6.42 6.42 0 0 0 1.928 2.928c1 .45 2.414.764 4.316.853C6.521 23.982 7.12 24 12 24s5.479-.018 7.382-.107c1.902-.089 3.316-.402 4.316-.853a6.42 6.42 0 0 0 2.928-1.928 6.42 6.42 0 0 0 1.928-2.928c.45-1 .764-2.414.853-4.316.089-1.902.107-2.501.107-7.382s-.018-5.479-.107-7.382c-.089-1.902-.402-3.316-.853-4.316a6.42 6.42 0 0 0-1.928-2.928A6.42 6.42 0 0 0 17.7.843c-1-.45-2.414-.764-4.316-.853C17.479.018 16.88 0 12 0zm0 5.337a6.663 6.663 0 0 1 6.663 6.663 6.663 6.663 0 0 1-6.663 6.663A6.663 6.663 0 0 1 5.337 12 6.663 6.663 0 0 1 12 5.337zm0 13.399a5.74 5.74 0 0 1-5.738-5.737 5.74 5.74 0 0 1 5.738-5.738 5.74 5.74 0 0 1 5.738 5.738 5.74 5.74 0 0 1-5.738 5.738zM18.83 6.72a1.17 1.17 0 1 0-2.34 0 1.17 1.17 0 0 0 2.34 0z"/>
+            </svg>
+          </a>
+          <a href="https://x.com/acrocketry" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+              <path d="M23.953 4.569c-.885.389-1.835.654-2.836.774 1.019-.611 1.798-1.577 2.165-2.732-.951.562-2.005.972-3.125 1.194-.897-.959-2.178-1.559-3.598-1.559-2.725 0-4.935 2.21-4.935 4.934 0 .388.044.765.127 1.125-4.103-.207-7.746-2.175-10.189-5.17-.425.723-.668 1.563-.668 2.465 0 1.705.867 3.208 2.185 4.08-.805-.026-1.56-.247-2.22-.616v.06c0 2.385 1.693 4.374 3.945 4.828-.413.112-.848.171-1.297.171-.317 0-.625-.03-.928-.089.626 1.951 2.445 3.375 4.605 3.416-1.686 1.32-3.808 2.106-6.113 2.106-.398 0-.79-.023-1.178-.068 2.177 1.398 4.751 2.217 7.537 2.217 9.032 0 13.965-7.49 13.965-13.964 0-.212-.005-.423-.014-.633.961-.695 1.8-1.564 2.455-2.555z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+  </main>
+</body>
+</html>
